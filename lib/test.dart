@@ -24,12 +24,16 @@ class _NavigationPageState extends State<NavigationPage> {
     });
   }
 
+  final List<Widget> _screens = [
+    WidgetsScreen(),
+    ClientsScreen(),
+    SettingsScreen(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -51,3 +55,52 @@ class _NavigationPageState extends State<NavigationPage> {
     );
   }
 }
+
+class WidgetsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SizedBox(
+        height: 30,
+        width: 300,
+      ),
+    );
+  }
+}
+
+class ClientsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text('Клиент 1'),
+            subtitle: Text('Малинуа Файтер'),
+          ),
+          ListTile(
+            title: Text('Клиент 2'),
+            subtitle: Text('Дворик Айвори'),
+          ),
+          ListTile(
+            title: Text('Клиент 3'),
+            subtitle: Text('Добер Лагерта'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SizedBox(
+        height: 30,
+        width: 300,
+      ),
+    );
+  }
+}
+
