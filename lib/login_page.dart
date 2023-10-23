@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:untitled1/test.dart';
+import 'package:untitled1/navigation_page.dart';
 
 void main() {
   runApp(const LoginPage());
@@ -112,6 +112,77 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
+
+
+
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     backgroundColor: const Color(0xFFE69E67),
+  //     body: Column(
+  //         mainAxisSize: MainAxisSize.max,
+  //         mainAxisAlignment: MainAxisAlignment.center,
+  //         children: <Widget>[
+  //           Column(
+  //             mainAxisSize: MainAxisSize.max,
+  //             mainAxisAlignment: MainAxisAlignment.center,
+  //             children: <Widget>[
+  //               Container(
+  //                 width: 300,
+  //                 child: TextField(
+  //                   controller: login,
+  //                   decoration: InputDecoration(
+  //                     labelText: 'Логин',
+  //                     labelStyle: TextStyle(color: Colors.white),
+  //                     enabledBorder: UnderlineInputBorder(
+  //                       borderSide: BorderSide(color: Colors.white),
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ),
+  //               SizedBox(
+  //                 height: 30,
+  //                 width: 300,
+  //               ),
+  //               Container(
+  //                 width: 300,
+  //                 child: TextField(
+  //                   obscureText: true,
+  //                   controller: password,
+  //                   decoration: InputDecoration(
+  //                     labelText: 'Пароль',
+  //                     labelStyle: TextStyle(color: Colors.white),
+  //                     enabledBorder: UnderlineInputBorder(
+  //                       borderSide: BorderSide(color: Colors.white),
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //           SizedBox(height: 30),
+  //           ElevatedButton(
+  //             onPressed: () {
+  //               Navigator.push(
+  //                 context,
+  //                 MaterialPageRoute(
+  //                     builder: (context) => const NavigationPage()),
+  //               );
+  //             },
+  //             child: const Text('Войти'),
+  //           ),
+  //           Container(
+  //             alignment: Alignment.bottomCenter,
+  //             child: SvgPicture.asset(
+  //               'assets/1.0x/malinois.svg',
+  //               height: 200,
+  //             ),
+  //           ),
+  //         ]),
+  //   );
+  // }
+  //
 
 
 
