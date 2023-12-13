@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitled1/navigation_page.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'data/Hive/client_hive_model.dart';
 
-void main() {
+
+
+late Box<ClientHiveModel> _clients;
+
+Future<void> main() async {
+  //+ Hive
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  _clients = await Hive.openBox<ClientHiveModel>('clientBox');
+  await _clients.add(ClientHiveModel(name: "Linda", pet: "Fighter Malinois"));
+  await _clients.add(ClientHiveModel(name: "Arthur", pet: "Superdog Whippet"));
+
+
   runApp(const LoginPage());
 }
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
